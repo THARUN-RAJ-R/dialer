@@ -4,10 +4,17 @@ package com.dialer.backend.dto;
  * Response DTO sent back to the Android app for a spam check.
  * Matches the Android Retrofit model: SpamResponse(number, is_spam, score)
  */
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class SpamCheckResponse {
 
+    @JsonProperty("number")
     private String number;
+
+    @JsonProperty("is_spam")
     private boolean is_spam;
+
+    @JsonProperty("score")
     private int score;
 
     public SpamCheckResponse() {}
